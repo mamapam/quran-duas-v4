@@ -1,9 +1,9 @@
 import express, { Request, Response } from 'express';
-import dotenv from 'dotenv';
+import client from './utils/redis-init';
+import config from './utils/config';
 import logger from './utils/logger';
 
-dotenv.config();
-
+client.connect();
 const app = express();
 
 app.get('/', (req: Request, res: Response) => {
@@ -15,6 +15,6 @@ app.get('/', (req: Request, res: Response) => {
   res.send('Hello World');
 });
 
-app.listen(5000, () => {
-  logger.info(`Listening on port 5000...`);
+app.listen(config.server.port, () => {
+  logger.info(`Listening on port ${config.server.port}...`);
 });
