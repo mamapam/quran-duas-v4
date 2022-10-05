@@ -1,8 +1,8 @@
 <template>
   <div>
     <header>
-      <nav>
-        <div>Quran Duas</div>
+      <nav class="bg-primary-blue flex flex-col justify-around items-center">
+        <h1>Quran Duas</h1>
         <img src="./assets/images/bismillah.png" alt="Bismillah" />
       </nav>
     </header>
