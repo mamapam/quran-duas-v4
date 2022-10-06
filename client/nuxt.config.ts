@@ -3,7 +3,7 @@ export default defineNuxtConfig({
   typescript: {
     shim: false,
   },
-  modules: ['nuxt-windicss', '@nuxtjs/google-fonts'],
+  modules: ['nuxt-windicss', '@nuxtjs/google-fonts', '@pinia/nuxt'],
   googleFonts: {
     families: {
       'EB Garamond': true,
