@@ -7,6 +7,7 @@ export default defineNuxtConfig({
   googleFonts: {
     families: {
       'EB Garamond': true,
+      Lato: true,
     },
     preload: true,
   },
