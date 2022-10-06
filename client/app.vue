@@ -12,7 +12,12 @@ onServerPrefetch(async () => {
 <template>
   <div class="h-screen">
     <the-nav />
-    <surah-filter />
+    <div
+      class="grid grid-cols-1 grid-rows-[1fr_2fr] h-[calc(100vh-7rem)] md:h-[calc(100vh-5rem)]"
+    >
+      <surah-filter class="overflow-scroll overflow-x-hidden" />
+      <surah-list />
+    </div>
   </div>
 </template>
 

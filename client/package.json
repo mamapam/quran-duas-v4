@@ -21,6 +21,7 @@
     "eslint-plugin-markdown": "^3.0.0",
     "eslint-plugin-vue": "^9.6.0",
     "nuxt": "3.0.0-rc.11",
+    "nuxt-icon": "^0.1.6",
     "nuxt-windicss": "^2.5.2",
     "prettier": "^2.7.1",
     "vue-eslint-parser": "^9.1.0"
