@@ -7,7 +7,7 @@ export const verses: VersesObject[] = [
   },
   {
     surah: 2,
-    ayah: [201, 250, 285, 286],
+    ayah: [128, 201, 250, 285, 286],
   },
   {
     surah: 3,
