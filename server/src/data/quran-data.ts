@@ -44,7 +44,8 @@ export const getQuranData = async () => {
         surahObject.surah.number = englishData.surah.number;
         surahObject.surah.arabicName = englishData.surah.name;
         surahObject.surah.englishName = englishData.surah.englishName;
-        surahObject.surah.englishTranslation = englishData.surah.englishNameTranslation;
+        surahObject.surah.englishTranslation =
+          englishData.surah.englishNameTranslation;
       }
 
       const englishVerseData: Verse = {

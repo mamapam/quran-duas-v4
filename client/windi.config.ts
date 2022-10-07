@@ -7,9 +7,15 @@ export default defineConfig({
       colors: {
         'primary-blue': '#114b5f',
       },
+      screens: {
+        xs: '300px',
+      },
       fontFamily: {
         main: ['EB Garamond', ...defaultTheme.fontFamily.serif],
         body: ['Lato', ...defaultTheme.fontFamily.sans],
+        urdu: ['Urdu'],
+        arabic: ['MeQuran'],
+        quran: ['QalamQuran'],
       },
       fontSize: {
         '3xs': '0.625rem', // 10px

@@ -1,6 +1,8 @@
 <script setup lang="ts">
 import { useSurahStore } from './stores/SurahStore';
 
+useHead({ title: 'Quran Duas' });
+
 const surahStore = useSurahStore();
 
 onServerPrefetch(async () => {
@@ -41,5 +43,21 @@ onServerPrefetch(async () => {
     scrollbar-color: rgb(70, 73, 70) rgb(158, 167, 158);
     scrollbar-width: thin;
   }
+}
+
+@font-face {
+  font-family: 'MeQuran';
+  src: local('MeQuran'), url('./assets/fonts/me_quran_2.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'QalamQuran';
+  src: local('QalamQuran'),
+    url('./assets/fonts/al_qalam_quran.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Urdu';
+  src: local('Urdu'), url('./assets/fonts/Jameel_1.ttf') format('truetype');
 }
 </style>
