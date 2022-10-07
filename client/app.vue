@@ -16,7 +16,7 @@ onServerPrefetch(async () => {
       class="grid grid-cols-1 grid-rows-[1fr_2fr] h-[calc(100vh-7rem)] md:h-[calc(100vh-5rem)]"
     >
       <surah-filter class="overflow-scroll overflow-x-hidden" />
-      <surah-list />
+      <surah-list class="overflow-scroll overflow-x-hidden" />
     </div>
   </div>
 </template>

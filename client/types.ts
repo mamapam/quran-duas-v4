@@ -3,16 +3,20 @@ export interface Verse {
   text: string;
 }
 
+export interface Verses {
+  en: Verse[];
+  ur: Verse[];
+}
+
+export interface Surah {
+  number: number;
+  arabicName: string;
+  englishName: string;
+  englishTranslation: string;
+}
+
 export interface SurahResponse {
   id: number;
-  surah: {
-    number: number;
-    arabicName: string;
-    englishName: string;
-    englishTranslation: string;
-  };
-  verses: {
-    en: Verse[];
-    ur: Verse[];
-  };
+  surah: Surah;
+  verses: Verses;
 }
