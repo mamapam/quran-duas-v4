@@ -13,6 +13,7 @@ export default defineNuxtConfig({
     families: {
       'EB Garamond': true,
       Lato: true,
+      'Amiri Quran': true,
     },
     preload: true,
   },

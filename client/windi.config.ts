@@ -14,8 +14,8 @@ export default defineConfig({
         main: ['EB Garamond', ...defaultTheme.fontFamily.serif],
         body: ['Lato', ...defaultTheme.fontFamily.sans],
         urdu: ['Urdu'],
-        arabic: ['MeQuran'],
         quran: ['QalamQuran'],
+        quran1: ['Amiri Quran'],
       },
       fontSize: {
         '3xs': '0.625rem', // 10px

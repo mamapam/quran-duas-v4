@@ -6,6 +6,7 @@ export interface Verse {
 export interface Verses {
   en: Verse[];
   ur: Verse[];
+  ar: Verse[];
 }
 
 export interface Surah {
