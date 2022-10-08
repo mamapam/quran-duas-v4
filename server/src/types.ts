@@ -19,6 +19,7 @@ export interface SurahResponse {
   verses: {
     en: Verse[];
     ur: Verse[];
+    ar: Verse[];
   };
 }
 

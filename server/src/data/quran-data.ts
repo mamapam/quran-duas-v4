@@ -7,7 +7,7 @@ import type { QuranApiAyahResponse, SurahResponse, Verse } from '../types';
 const data: SurahResponse[] = [];
 
 const createVerseUrl = (surah: number, ayah: number) => {
-  return `/ayah/${surah}:${ayah}/editions/en.sahih,ur.ahmedali`;
+  return `/ayah/${surah}:${ayah}/editions/en.sahih,ur.ahmedali,quran-simple`;
 };
 
 export const getQuranData = async () => {
@@ -24,6 +24,7 @@ export const getQuranData = async () => {
       verses: {
         en: [],
         ur: [],
+        ar: [],
       },
     };
 
@@ -39,6 +40,7 @@ export const getQuranData = async () => {
         } = await axios.get<QuranApiAyahResponse>(url);
         const englishData = data[0];
         const urduData = data[1];
+        const arabicData = data[2];
 
         if (i == 0) {
           // in first ayah, store surah data as well
@@ -60,6 +62,12 @@ export const getQuranData = async () => {
           text: urduData.text,
         };
         surahObject.verses.ur.push(urduVerseData);
+
+        const arabicVerseData: Verse = {
+          id: arabicData.numberInSurah,
+          text: arabicData.text,
+        };
+        surahObject.verses.ar.push(arabicVerseData);
       } catch (error) {
         logger.error(error);
       }
