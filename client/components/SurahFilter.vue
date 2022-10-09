@@ -27,7 +27,7 @@ watch(checked, (newChecked) => {
       </button>
     </div>
     <ul
-      class="flex flex-col flex-wrap items-start max-h-160 sm:max-h-106 gap-4"
+      class="flex flex-col flex-wrap items-start max-h-160 sm:max-h-106 md:max-h-[calc(100vh-10rem)] gap-4"
     >
       <li v-for="surah in surahData" :key="surah.id">
         <p class="text-left">

@@ -23,7 +23,7 @@ const props = defineProps<{
     </div>
     <div
       v-for="(verse, index) in props.verses.en"
-      class="bg-gray-300 p-2 my-2 rounded-md flex flex-col"
+      class="bg-gray-300 p-2 my-2 rounded-md flex flex-col gap-3"
     >
       <p class="self-end font-quran text-lg lg:text-xl" dir="rtl">
         {{ props.verses.ar[index].text

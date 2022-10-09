@@ -15,9 +15,11 @@ onServerPrefetch(async () => {
   <div class="h-screen">
     <the-nav />
     <div
-      class="grid grid-cols-1 grid-rows-[1fr_2fr] h-[calc(100vh-7rem)] md:h-[calc(100vh-5rem)]"
+      class="grid grid-cols-1 grid-rows-[1fr_2fr] h-[calc(100vh-7rem)] md:h-[calc(100vh-5rem)] md:grid-cols-[1fr_2fr] md:grid-rows-1"
     >
-      <surah-filter class="overflow-scroll overflow-x-hidden" />
+      <surah-filter
+        class="overflow-y-auto overflow-x-hidden md:overflow-x-auto"
+      />
       <surah-list class="overflow-scroll overflow-x-hidden" />
     </div>
   </div>
@@ -26,7 +28,7 @@ onServerPrefetch(async () => {
 <style>
 ::-webkit-scrollbar {
   width: 0.5rem;
-  height: 1rem;
+  height: 0.5rem;
 }
 ::-webkit-scrollbar-track {
   background: rgb(158, 167, 158);
