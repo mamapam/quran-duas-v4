@@ -4,6 +4,13 @@ import { SurahResponse } from '~~/types';
 
 const surahStore = useSurahStore();
 const surahData: SurahResponse[] = surahStore.getSurahList;
+const checked = ref([] as number[]);
+
+const resetFilter = () => (checked.value = []);
+
+watch(checked, (newChecked) => {
+  surahStore.setFilterList(newChecked);
+});
 </script>
 
 <template>
@@ -14,6 +21,7 @@ const surahData: SurahResponse[] = surahStore.getSurahList;
       </p>
       <button
         class="bg-transparent hover:bg-primary-blue font-semibold hover:text-white py-1 px-2 border-2 border-primary-blue hover:border-transparent rounded tracking-widest uppercase"
+        @click="resetFilter"
       >
         Reset
       </button>
@@ -27,7 +35,8 @@ const surahData: SurahResponse[] = surahStore.getSurahList;
             <input
               type="checkbox"
               class="align-bottom relative -top-1 mr-1"
-              :id="surah.id.toString()"
+              v-model="checked"
+              :value="surah.id"
             />
             {{ surah.surah.englishName }}
           </label>
