@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "Quran Duas v4 Server",
   "main": "server.js",
+  "engines": {
+    "node": "19.x"
+  },
   "scripts": {
     "dev": "nodemon",
     "build": "rimraf ./build && tsc",

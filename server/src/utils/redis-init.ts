@@ -2,8 +2,6 @@ import { createClient } from 'redis';
 import logger from './logger';
 import config from './config';
 
-logger.info('over here');
-
 const client = createClient({
   socket: {
     host: config.redis.hostName,

@@ -17,4 +17,7 @@ export default defineNuxtConfig({
     },
     preload: true,
   },
+  runtimeConfig: {
+    api: process.env.NUXT_API_URL || 'http://localhost:5005',
+  },
 });
