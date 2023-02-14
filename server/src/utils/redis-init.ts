@@ -2,13 +2,7 @@ import { createClient } from 'redis';
 import logger from './logger';
 import config from './config';
 
-const client = createClient({
-  password: config.redis.password,
-  socket: {
-    host: config.redis.host,
-    port: +config.redis.port!,
-  },
-});
+const client = createClient({ url: config.redis });
 
 client.on('connect', () => {
   logger.info('Client connected to redis.');

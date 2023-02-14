@@ -18,14 +18,7 @@ const CLIENT = {
   port: CLIENT_PORT,
 };
 
-const { REDIS_HOST } = process.env || 'localhost';
-const { REDIS_PASS } = process.env;
-const { REDIS_PORT } = process.env || 6379;
-const REDIS = {
-  host: REDIS_HOST,
-  port: REDIS_PORT,
-  password: REDIS_PASS,
-};
+const { REDIS_URL } = process.env;
 
 const { QURAN_API } = process.env;
 
@@ -33,7 +26,7 @@ const config = {
   environment: ENVIRONMENT,
   server: SERVER,
   client: CLIENT,
-  redis: REDIS,
+  redis: REDIS_URL,
   quranApi: QURAN_API,
 };
 
