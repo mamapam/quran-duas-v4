@@ -18,7 +18,7 @@ const CLIENT = {
   port: CLIENT_PORT,
 };
 
-const { REDISCLOUD_URL } = process.env;
+const { REDISCLOUD } = process.env;
 
 const { QURAN_API } = process.env;
 
@@ -26,7 +26,7 @@ const config = {
   environment: ENVIRONMENT,
   server: SERVER,
   client: CLIENT,
-  redis: REDISCLOUD_URL,
+  redis: REDISCLOUD,
   quranApi: QURAN_API,
 };
 
