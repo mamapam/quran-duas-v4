@@ -24,26 +24,22 @@ const convertToArabicNumber = (englishNum: string): string => {
 </script>
 
 <template>
-  <span
-    dir="ltr"
-    class="ayah font-quran1 text-xs px-4 inline-block relative"
-    v-html="convertToArabicNumber(props.verse)"
-  ></span>
+  <div class="inline-block">
+    <span
+      dir="ltr"
+      class="ayah font-quran1 text-xs px-5 inline-block relative text-size-sm"
+      v-html="convertToArabicNumber(props.verse)"
+    ></span>
+  </div>
 </template>
 
 <style scoped>
-/* .ayah {
-  padding: 0 0.5em;
-  display: inline-block;
-  position: relative;
-} */
-
 .ayah::after {
   content: '\06DD';
   display: block;
   position: absolute;
-  font-size: 1.5rem;
-  top: 40%;
+  font-size: 2rem;
+  top: 7%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
