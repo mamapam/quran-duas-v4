@@ -23,6 +23,7 @@ const props = defineProps<{
     </div>
     <div
       v-for="(verse, index) in props.verses.en"
+      :key="verse.text"
       class="bg-gray-300 p-2 my-2 rounded-md flex flex-col gap-3"
     >
       <p class="self-end font-quran text-lg lg:text-xl" dir="rtl">
