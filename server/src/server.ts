@@ -6,8 +6,6 @@ import logger from './utils/logger';
 import { getQuranData } from './data/quran-data';
 import quranRoutes from './routes/quran';
 
-logger.info('Redis connection string ', config.redis);
-
 client.connect().then(() => logger.info('Connected to redis'));
 const app = express();
 
