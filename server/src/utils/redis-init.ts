@@ -5,7 +5,7 @@ import config from './config';
 const client = createClient({ url: config.redis });
 
 client.on('connect', () => {
-  logger.info('Client connected to redis.');
+  logger.info('Client connecting to redis.');
 });
 
 client.on('ready', () => {
